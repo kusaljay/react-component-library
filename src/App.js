@@ -1,24 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Button from './components/Button';
+import styled from 'styled-components';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Button onClick={() => console.log('clicked primary')}>Click Me!</Button>
+      <Button secondary onClick={() => console.log('clicked secondary')}>Click Me!</Button>
+      <Button inverse big onClick={() => console.log('clicked the big one')}>Click Me!</Button>
     </div>
   );
 }
