@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, {css} from 'styled-components';
+import Loader from './Loader';
 
 const StyledButton = styled.button`
   border-radius: 3px;
@@ -27,14 +28,11 @@ const StyledButton = styled.button`
   }}
 `
 
-const Button = ({secondary, big, inverse, ...props}) => {
+const Button = ({secondary, big, inverse, loading, children, ...props}) => {
   return (
-    <StyledButton
-      secondary={secondary}
-      big={big}
-      inverse={inverse}
-      {...props}
-    />
+    <StyledButton secondary={secondary} big={big} inverse={inverse} {...props}>
+      {loading ? <Loader white /> : children}
+    </StyledButton>
   )
 }
 
