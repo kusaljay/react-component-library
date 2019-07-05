@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Container from './components/Container';
-import Flex, { Column } from './components/Flex';
-import Button from './components/Button';
+import Container from './components/Container/';
+import Flex, { Column } from './components/Flex/';
+import Button from './components/Button/';
+import {InputField} from './components/Input/';
 
 class App extends Component {
   state = {
@@ -22,8 +23,13 @@ class App extends Component {
               <Button inverse big onClick={() => console.log('clicked the big one')}>Click Me!</Button>
             </Column>
           </Flex>
+          <Flex column>
+            <InputField label="First Name" name="firstName" />
+            <InputField label="Last Name" name="lastName" />
+          </Flex>
+        
         </Container>
-    );
+    )
   }
 }
 
