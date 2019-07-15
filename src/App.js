@@ -3,10 +3,11 @@ import Container from './components/Container/';
 import Flex, { Column } from './components/Flex/';
 import Button from './components/Button/';
 import {InputField} from './components/Input/';
+import Card from './components/Card';
 
 class App extends Component {
   state = {
-    loading: false
+    loading: true
   }
 
   render() {
@@ -27,6 +28,11 @@ class App extends Component {
             <InputField label="First Name" name="firstName" />
             <InputField label="Last Name" name="lastName" />
           </Flex>
+          <Flex>
+            <Card primary>Lorem ipsum dolor sit amet, ut nullam facilisi eos.</Card>
+            <Card primary delay={300}>Lorem ipsum dolor sit amet, ut nullam facilisi eos.</Card>
+          </Flex>
+          
         
         </Container>
     )

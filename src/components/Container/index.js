@@ -10,7 +10,7 @@ const paddingLeftRight = props => props.full ? 0 : 'calc((100vw - 960px) / 2)',
 
 
 const Container = styled.div`
-  background-color: pink;
+  background-color: rgba(0, 0, 0, 0.1);
   padding: ${paddingTopBottom} ${paddingLeftRight};
 `
 
